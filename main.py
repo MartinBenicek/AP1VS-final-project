@@ -5,6 +5,7 @@ Program pro převod číselných soustav.
 @version 1.2
 """
 
+import time
 
 reminders = []
 
@@ -19,16 +20,17 @@ def binOcta(number, system):
     """
     Funkce pro převod do dvojkové a osmičkové soustavy.
 
-    Dokud je 5 větší než 0 vydělí dvojkou a zbytek přidá do reminders.
-    5 se vydělí 2 a beze zbytku se přepíše na vydělené číslo.
+    Dokud je number větší než 0, vydělí system a zbytek přidá do reminders.
+    number se vydělí system a beze zbytku se přepíše na vydělené číslo.
     Až je vydělené číslo == 0 cyklus končí.
-    Reminders seřadí čísla od posledného k prvnímu.
-
-    Pro osmičkovou soutavu platí stejný postup.
+    Reminders seřadí čísla od posledného k prvnímu a vypíše je.
 
     Příklad použití:
     >>> binOcta(5, 2)
     101
+
+    >>> binOcta(5, 8)
+    5
     """
     while number > 0:
         reminders.append(number % system)
@@ -36,12 +38,18 @@ def binOcta(number, system):
     reminders.reverse()
     for i in reminders:
         print(i, end="")
+    time.sleep(5)
 
 
 def sixteenth(number, system):
     """
     Funkce pro převod do šestnáctkové soustavy.
 
+    Dokud je number větší než 0 vydělí system a zbytek přidá do reminders.
+    Pokud je zbytek >=10 tak se přepisuje na příslušná písmena
+    number se vydělí system a beze zbytku se přepíše na vydělené číslo.
+    Až je vydělené číslo == 0 cyklus končí.
+    Reminders seřadí čísla od posledného k prvnímu a vypíše je.
     """
     hexadecimal = {10: "A", 11: "B", 12: "C", 13: "D", 14: "E", 15: "F"}
     while number > 0:
@@ -54,6 +62,7 @@ def sixteenth(number, system):
     reminders.reverse()
     for i in reminders:
         print(i, end="")
+    time.sleep(5)
 
 
 if system == 2 or system == 8:
