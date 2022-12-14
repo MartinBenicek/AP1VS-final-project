@@ -9,6 +9,7 @@ import time
 
 reminders = []
 
+
 number = int(input("Zadejte číslo které chcete převést: "))
 system = int(input("Zadejte číselnou soustavu (2, 8, 16): "))
 
@@ -29,7 +30,7 @@ def binOcta(number, system):
     >>> binOcta(5, 2)
     101
 
-    >>> binOcta(5, 8)
+    >>> binOcta(14, 8)
     5
     """
     while number > 0:
@@ -38,7 +39,9 @@ def binOcta(number, system):
     reminders.reverse()
     for i in reminders:
         print(i, end="")
+    # časové spoždění 5 sekund aby si uživatel mohl přečíst výsledek na konzoli
     time.sleep(5)
+    return reminders
 
 
 def sixteenth(number, system):
@@ -62,7 +65,9 @@ def sixteenth(number, system):
     reminders.reverse()
     for i in reminders:
         print(i, end="")
+    # časové spoždění 5 sekund aby si uživatel mohl přečíst výsledek na konzoli
     time.sleep(5)
+    return reminders
 
 
 if system == 2 or system == 8:
