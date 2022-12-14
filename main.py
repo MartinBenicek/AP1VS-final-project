@@ -9,13 +9,18 @@ import time
 
 reminders = []
 
+try:
+    number = int(input("Zadejte číslo které chcete převést: "))
+    system = int(input("Zadejte číselnou soustavu (2, 8, 16): "))
 
-number = int(input("Zadejte číslo které chcete převést: "))
-system = int(input("Zadejte číselnou soustavu (2, 8, 16): "))
+    if number == 0:
+        print(0)
 
-if number == 0:
-    print(0)
-
+# Slouží v případě generace pdoc dokumentu.
+except EOFError as e:
+    number = 5
+    system = 2
+    print(e)
 
 def binOcta(number, system):
     """
