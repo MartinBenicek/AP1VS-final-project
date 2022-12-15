@@ -25,6 +25,9 @@ except EOFError as e:
 
 def binOcta(number, system):
     """
+    :param Number: number je číslo, které se má převést.
+    :param System: system je požadovaná soustava.
+
     Funkce pro převod do dvojkové a osmičkové soustavy.
 
     Dokud je number větší než 0, vydělí system a zbytek přidá do reminders.
@@ -52,6 +55,9 @@ def binOcta(number, system):
 
 def sixteenth(number, system):
     """
+    :param Number: number je číslo, které se má převést.
+    :param System: system je požadovaná soustava.
+
     Funkce pro převod do šestnáctkové soustavy.
 
     Dokud je number větší než 0 vydělí system a zbytek přidá do reminders.
