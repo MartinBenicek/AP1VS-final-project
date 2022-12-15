@@ -22,6 +22,7 @@ except EOFError as e:
     system = 2
     print(e)
 
+
 def binOcta(number, system):
     """
     Funkce pro převod do dvojkové a osmičkové soustavy.
